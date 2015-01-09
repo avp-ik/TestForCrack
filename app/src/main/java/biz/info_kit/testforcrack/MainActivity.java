@@ -4,14 +4,24 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private TextView _result;
+    private EditText _name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        _result = (TextView)findViewById(R.id.result);
+        _name = (EditText)findViewById(R.id.name);
+
     }
 
 
@@ -35,5 +45,11 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View view) {
+        if(_name.getText().length() != 0) {
+            _result.setText("Hello " + _name.getText() + " !!!");
+        }
     }
 }
