@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -13,6 +14,8 @@ public class MainActivity extends ActionBarActivity {
 
     private TextView _result;
     private EditText _name;
+    private Button _oldButton;
+    private int mCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,13 @@ public class MainActivity extends ActionBarActivity {
 
         _result = (TextView)findViewById(R.id.result);
         _name = (EditText)findViewById(R.id.name);
+        _oldButton = (Button)findViewById(R.id.buttonOldHelp);
+        _oldButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _oldButton.setText(getString(R.string.message_OldHelp));
+            }
+        });
 
     }
 
@@ -52,4 +62,8 @@ public class MainActivity extends ActionBarActivity {
             _result.setText("Hello " + _name.getText() + " !!!");
         }
     }
+
+    public void onButtonClick(View view) {
+        _result.setText(getString(R.string.message_Help));
+        }
 }

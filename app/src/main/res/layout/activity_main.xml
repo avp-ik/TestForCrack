@@ -45,4 +45,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonHelp_Text"
+        android:id="@+id/buttonHelp"
+        android:onClick="onButtonClick"
+        android:layout_alignBottom="@+id/header"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonOldHelp_Text"
+        android:id="@+id/buttonOldHelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/result"
+        android:layout_alignStart="@+id/result"
+        android:layout_alignRight="@+id/result"
+        android:layout_alignEnd="@+id/result" />
+
 </RelativeLayout>

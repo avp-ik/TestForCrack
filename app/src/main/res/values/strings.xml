@@ -4,5 +4,9 @@
     <string name="app_name">TestForCrack</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="buttonHelp_Text">Help</string>
+    <string name="message_Help">Help me anybody!</string>
+    <string name="buttonOldHelp_Text">OldHelp</string>
+    <string name="message_OldHelp">Yee Click Me On More Time</string>
 
 </resources>
